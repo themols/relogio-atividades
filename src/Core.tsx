@@ -7,5 +7,5 @@ import { About } from './pages/About';
 import { History } from './pages/History';
 
 export function Core() {
-    return <History />;
+    return <Home />;
 }
