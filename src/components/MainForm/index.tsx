@@ -5,10 +5,8 @@ import { InputDefault } from "../Input/InputDefault";
 import type React from "react";
 import { useRef } from "react";
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
-
 import type { TaskModel } from '../../models/TaskModel';
 import { getNextCycleType } from '../../utils/getNextCycleType';
-
 import { TaskActionsTypes } from "../../contexts/TaskContext/taskActions";
 import { Tips } from "../Tips";
 
@@ -42,11 +40,6 @@ export function MainForm() {
     };
 
     dispatch({ type: TaskActionsTypes.START_TASK, payload: newTask })
-    const worker = new Worker(
-      new URL('../../worker/timerWorker.js', import.meta.url)
-    );
-
-    worker.postMessage('completo');
   }
 
   function handleInterruptTask(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {

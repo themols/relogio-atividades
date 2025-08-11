@@ -1,4 +1,4 @@
-export const initialTaskState = {
+export const InitialTaskState = {
   tasks: [],
   secondsRemaining: 0,
   formattedSecondRemaining: '00:00',
